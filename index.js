@@ -3,9 +3,9 @@ const app = express()
 require("dotenv").config()
 require("./db")
 const PORT = process.env.PORT || 8080
-const userRoutes = require("./src/routes/userRoutes")
-const coffeeRoutes = require("./src/routes/CoffeeRoutes")
-const uploadRoutes = require("./src/routes/uploadMediaRouter")
+const userRoutes = require("./routes/userRoutes")
+const coffeeRoutes = require("./routes/CoffeeRoutes")
+const uploadRoutes = require("./routes/uploadMediaRouter")
 app.use(express.json())
 
 app.get("/", (req, res) => {
