@@ -1,9 +1,5 @@
-const { registerUser, loginUser } = require('../conrollers/userController');
+const { verify } = require("../conrollers/userController")
+const router = require("express").Router()
 
-const router = require('express').Router();
-
-// /users/register
-router.post('/register', registerUser);
-router.post('/login', loginUser)
-
-module.exports = router;
+router.post("/login", verify)
+module.exports = router
